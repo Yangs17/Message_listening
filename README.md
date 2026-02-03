@@ -1,2 +1,2 @@
 # Message_listening
-Mainly used for the transfer and sending of various types of messages, which facilitates the remote control of the terminal to send, receive and process data to the server. Currently, it has been completed to send and receive TG bot information locally. In the future, it can be expanded to mqtt what's app, Feishu, etc.
+主要用于各类消息的中转发送，方便终端远程控制服务器数据收发跟处理 当前已完成 本地收发TG bot 信息 后续可以扩展mqtt what's app 飞书等
