@@ -15,6 +15,10 @@
 直接docker部署即可，v2ray-linux-64.zip因为下载比较慢，
 我这边是直接下载下来安装，用来解析vmess，如果网络环境好的可以自行更改外部Dockerfile文件
 
+另外根目录下必须放一个logs空文件夹
+<img width="509" height="272" alt="image" src="https://github.com/user-attachments/assets/c62d91e7-a95e-473e-818d-1c501b74b87b" />
+
+
 #### 使用说明
 
 首先需要注册一个TG机器人，可自行搜索。
@@ -41,5 +45,6 @@ TG机器人的逻辑处理详见main.py，可自行修改，可接脚本或大�
 2.  新建 Feat_xxx 分支
 3.  提交代码
 4.  新建 Pull Request
+
 
 
