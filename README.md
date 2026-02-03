@@ -5,6 +5,8 @@
 当前已完成 本地收发TG bot 信息 
 后续可以扩展mqtt  what's app 飞书等
 
+
+
 #### 程序文件说明
 
 <img width="635" height="193" alt="image" src="https://github.com/user-attachments/assets/bb243d74-cab1-40ee-9c35-09a7f445e592" />
@@ -26,23 +28,20 @@
 
 tg_bot 中 Dockerfile  main.py           
 
-1.这里两个文件的两个端口需要一致
-
-2.主要是对v2ray的镜像进行暴露，用于镜像间的数据收发
-
-3.TG机器人的逻辑处理详见main.py，可自行修改，可接脚本或大模型等
-
-4.当前有用例Hello 回复Hi ,以及回复订阅信息
-
-5.其他所有配置信息均在.env 文件中，需要自行更改
+1.  这里两个文件的两个端口需要一致
+2.  主要是对v2ray的镜像进行暴露，用于镜像间的数据收发
+3.  TG机器人的逻辑处理详见main.py，可自行修改，可接脚本或大模型等
+4.  当前有用例Hello 回复Hi ,以及回复订阅信息
+5.  其他所有配置信息均在.env 文件中，需要自行更改
 
 
 后续扩展可以用HTTP / HTTPS / MQTT 对接 tg_bot上main.c做转发，实现任一终端发送数据到TG上
 
 
 实现效果
-1.可在TG上实现机器人自动对话触发远程服务器，
-2.远程服务器可随时发送内容到TG上，实现对话框控制
+1.  可在TG上实现机器人自动对话触发远程服务器
+2.  远程服务器可随时发送内容到TG上，实现对话框控制
+
 <img width="408" height="408" alt="image" src="https://github.com/user-attachments/assets/cffd92f8-6878-4e8e-9fab-0fc70c6ee195" />
 
 
@@ -52,6 +51,7 @@ tg_bot 中 Dockerfile  main.py
 2.  新建 Feat_xxx 分支
 3.  提交代码
 4.  新建 Pull Request
+
 
 
 
