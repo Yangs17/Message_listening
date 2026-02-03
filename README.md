@@ -27,10 +27,15 @@
 tg_bot 中 Dockerfile  main.py           
 
 1.这里两个文件的两个端口需要一致
+
 2.主要是对v2ray的镜像进行暴露，用于镜像间的数据收发
+
 3.TG机器人的逻辑处理详见main.py，可自行修改，可接脚本或大模型等
+
 4.当前有用例Hello 回复Hi ,以及回复订阅信息
+
 5.其他所有配置信息均在.env 文件中，需要自行更改
+
 
 后续扩展可以用HTTP / HTTPS / MQTT 对接 tg_bot上main.c做转发，实现任一终端发送数据到TG上
 
@@ -47,6 +52,7 @@ tg_bot 中 Dockerfile  main.py
 2.  新建 Feat_xxx 分支
 3.  提交代码
 4.  新建 Pull Request
+
 
 
 
