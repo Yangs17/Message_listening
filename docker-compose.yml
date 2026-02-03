@@ -1,0 +1,47 @@
+version: "3.7"
+services:
+  v2ray-proxy:
+    build: .
+    container_name: v2ray_proxy_standalone
+    restart: unless-stopped
+    networks:
+      - v2ray_net
+    volumes:
+      - ./fetch_sub.sh:/etc/v2ray/fetch_sub.sh:rw
+      - v2ray_config:/etc/v2ray/
+      - ./logs:/var/log/v2ray:rw
+    environment:
+      - V2RAY_SUBSCRIPTION_URL=${V2RAY_SUBSCRIPTION_URL}
+      - V2RAY_UPDATE_HOURS=${V2RAY_UPDATE_HOURS}
+      - INTERNAL_NOTIFY_URL=${INTERNAL_NOTIFY_URL}
+    ports:
+      - "11291:10808"
+    command: >
+          /bin/bash -c "
+            chmod +x /etc/v2ray/fetch_sub.sh;
+            /etc/v2ray/fetch_sub.sh &
+            until [ -s /etc/v2ray/config.json ]; do sleep 2; done;
+            /usr/bin/v2ray run -c /etc/v2ray/config.json
+          "
+
+  tg-bot:
+    build: ./tg_bot
+    container_name: tg-bot
+    restart: unless-stopped
+    depends_on:
+      - v2ray-proxy
+    networks:
+      - v2ray_net
+    volumes:
+      - v2ray_config:/etc/v2ray/:rw  # 必须挂载，否则无法“查询”
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - ADMIN_IDS=${ADMIN_IDS}
+      - TG_BOT_PROXY_URL=${TG_BOT_PROXY_URL}
+
+networks:
+  v2ray_net:
+    driver: bridge
+
+volumes:
+  v2ray_config:
