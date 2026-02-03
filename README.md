@@ -6,7 +6,8 @@
 后续可以扩展mqtt  what's app 飞书等
 
 #### 程序文件说明
-![输入图片说明](imges7700989699883.png)
+
+<img width="635" height="193" alt="image" src="https://github.com/user-attachments/assets/bb243d74-cab1-40ee-9c35-09a7f445e592" />
 
 
 #### 安装教程
@@ -31,7 +32,8 @@ TG机器人的逻辑处理详见main.py，可自行修改，可接脚本或大�
 实现效果
 1.可在TG上实现机器人自动对话触发远程服务器，
 2.远程服务器可随时发送内容到TG上，实现对话框控制
-![输入图片说明](imgesimage.png)
+<img width="408" height="408" alt="image" src="https://github.com/user-attachments/assets/cffd92f8-6878-4e8e-9fab-0fc70c6ee195" />
+
 
 #### 参与贡献
 
@@ -39,4 +41,5 @@ TG机器人的逻辑处理详见main.py，可自行修改，可接脚本或大�
 2.  新建 Feat_xxx 分支
 3.  提交代码
 4.  新建 Pull Request
+
 
